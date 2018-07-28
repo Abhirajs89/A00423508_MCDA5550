@@ -47,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="calculateBMI"
-                android:text="Button" />
+                android:text="Calculate BMI" />
         </TableRow>
 
         <TableRow
@@ -62,5 +62,18 @@
                 android:hint="Result"
                 android:inputType="numberDecimal" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/viewHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="viewHistory"
+                android:text="View History" />
+        </TableRow>
     </TableLayout>
+
 </android.support.constraint.ConstraintLayout>
