@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-    private TextView mErrorView;
+    //private TextView mErrorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
-        mErrorView = (TextView) findViewById(R.id.errorView);
+        //mErrorView = (TextView) findViewById(R.id.errorView);
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -104,6 +104,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         getLoaderManager().initLoader(0, null, this);
+    }
+
+    public void viewRegister(View view){
+        Intent registerIntent = new Intent(LoginActivity.this,MainActivity.class);
+        startActivity(registerIntent);
     }
 
     private boolean mayRequestContacts() {
@@ -374,7 +379,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             } else {
                 mPasswordView.setError("Email/Password is incorrect!");
-                mErrorView.requestFocus();
+                mPasswordView.requestFocus();
             }
         }
 

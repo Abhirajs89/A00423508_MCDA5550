@@ -9,12 +9,13 @@
     <TableLayout
         android:layout_width="368dp"
         android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="8dp">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/textHeight"
@@ -27,7 +28,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/textWeight"
@@ -40,7 +41,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/button2"
@@ -52,7 +53,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/textResult"
@@ -65,7 +66,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/viewHistory"

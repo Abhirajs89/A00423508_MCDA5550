@@ -31,7 +31,7 @@ class InClassDatabaseHelper extends SQLiteOpenHelper {
                 + "NAME TEXT, "
                 + "PASSWORD TEXT, " // Never store passwords in clear text in real apps
                 + "HEALTH_CARD_NUMB TEXT, "
-                + "DATE INTEGER);");
+                + "DATE TEXT);");
 
         db.execSQL("CREATE TABLE "+TABLE_NAME_BMI+" ("
                 + "_id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -41,13 +41,13 @@ class InClassDatabaseHelper extends SQLiteOpenHelper {
                 + "DATE DATE, "
                 + "EMAIL TEXT);");
 
-        Date today = new Date(); // we want to start with some initial data
+        /*Date today = new Date(); // we want to start with some initial data
         ContentValues personValues = new ContentValues();
         personValues.put("EMAIL", "abc@test.com");
         personValues.put("NAME", "Abhiraj Suryawanshi");
         personValues.put("PASSWORD", "SuperSecret");
         personValues.put("HEALTH_CARD_NUMB", "123456789101");
         personValues.put("DATE", today.getTime());
-        db.insert(TABLE_NAME,null, personValues);
+        db.insert(TABLE_NAME,null, personValues);*/
     }
 }
